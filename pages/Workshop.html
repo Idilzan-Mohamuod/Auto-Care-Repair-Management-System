@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Workshop | AutoCare Repair</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+     <header>
+  <nav class="container">
+    <h2 class="logo"><i class="fa-solid fa-car"></i> AutoCare</h2>
+
+    <!-- hamburger button, only shows up on small screens -->
+    <a href="#" class="toggle-btn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="Dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+      <li><a href="BookService.html"><i class="fa-solid fa-wrench"></i> New Repair Service</a></li>
+      <li><a href="Workshop.html"><i class="fa-solid fa-screwdriver-wrench"></i> Workshop Maintenance</a></li>
+      <li><a href="AnalyticReport.html"><i class="fa-solid fa-chart-simple"></i> AnalyticReport</a></li>
+    </ul>
+  </nav>
+</header>
+     <main class="container">
+
+    <section class="page-header workshop-header">
+
+        <div>
+            <h1> <i class="fa-solid fa-screwdriver-wrench"></i>  Workshop Queue</h1>
+            <p>Monitor and manage all repair jobs.</p>
+        </div>
+
+        <button class="btn" onclick="window.location.href='Book-Service.html'">
+         <i class="fa-solid fa-plus"></i> New Repair Job
+        </button>
+
+    </section>
+
+
+    <section class="card workshop-tools">
+
+        <div class="tool-group">
+
+            <label for="searchJob"> <i class="fa-solid fa-magnifying-glass"></i>  Search Customer</label>
+
+            <input
+                type="text"
+                id="searchJob"
+                placeholder="Customer name..."
+            >
+
+        </div>
+
+        <div class="tool-group">
+
+            <label for="statusFilter">Status</label>
+
+            <select id="statusFilter">
+
+                <option value="">All Status</option>
+                <option>Pending</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+                <option>Collected</option>
+
+            </select>
+
+        </div>
+
+        <div class="tool-group">
+
+            <label for="mechanicFilter">Mechanic</label>
+
+            <select id="mechanicFilter">
+
+                <option value="">All Mechanics</option>
+                <option>Ahmed</option>
+                <option>Mohamed</option>
+                <option>Hassan</option>
+                <option>Ali</option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <section class="card">
+
+        <div class="table-header">
+
+            <h2>Active Repair Jobs</h2>
+
+            <span id="jobCounter">0 Jobs</span>
+
+        </div>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Job ID</th>
+                    <th>Customer</th>
+                    <th>Vehicle</th>
+                    <th>Repair</th>
+                    <th>Mechanic</th>
+                    <th>Status</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="jobTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+<script src="../js/Responsive.js"></script>
+<script src="../js/NotificationAPI.js"></script>
+<script src="../js/Workshop.js"></script>
