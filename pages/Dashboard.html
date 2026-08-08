@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | AutoCare Repair</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+   <header>
+  <nav class="container">
+    <h2 class="logo"><i class="fa-solid fa-car"></i> AutoCare</h2>
+
+    <!-- hamburger button, only shows up on small screens -->
+    <a href="#" class="toggle-btn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="Dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+      <li><a href="BookService.html"><i class="fa-solid fa-wrench"></i> New Repair Service</a></li>
+      <li><a href="Workshop.html"><i class="fa-solid fa-screwdriver-wrench"></i> Workshop Maintenance</a></li>
+      <li><a href="AnalyticReport.html"><i class="fa-solid fa-chart-simple"></i> AnalyticReport</a></li>
+      <li><a href="../index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+    </ul>
+  </nav>
+</header>
+    <main class="container">
+      <section class="page-header">
+        <h1>Dashboard</h1>
+         <p id="welcomeUser"></p>
+             </section>
+
+    <section class="stats">
+  <div class="card">
+    <h3><i class="fa-solid fa-clipboard-list"></i> Total Jobs</h3>
+    <h2 id="totalJobs">0</h2>
+  </div>
+
+  <div class="card">
+    <h3><i class="fa-solid fa-clock"></i> Pending</h3>
+    <h2 id="pendingJobs">0</h2>
+  </div>
+
+  <div class="card">
+    <h3><i class="fa-solid fa-gears"></i> In Progress</h3>
+    <h2 id="progressJobs">0</h2>
+  </div>
+
+  <div class="card">
+    <h3><i class="fa-solid fa-circle-check"></i> Completed</h3>
+    <h2 id="completedJobs">0</h2>
+  </div>
+
+  <div class="card">
+    <h3><i class="fa-solid fa-box"></i> Collected</h3>
+    <h2 id="collectedJobs">0</h2>
+  </div>
+</section>
+
+      
+      
+
+      <section class="card">
+        <h2>Recent Repair Jobs</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Job ID</th>
+              <th>Customer</th>
+              <th>Vehicle</th>
+              <th>Repair</th>
+              <th>Mechanic</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody id="recentJobs"></tbody>
+        </table>
+      </section>
+      
+    </main>
+    <script src="../js/Responsive.js"></script>
+    <script src="../js/Dashboard.js"></script>
+  </body>
+</html>
