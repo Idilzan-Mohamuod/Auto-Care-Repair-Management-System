@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Service | AutoCare Repair</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+    <header>
+  <nav class="container">
+    <h2 class="logo"><i class="fa-solid fa-car"></i> AutoCare</h2>
+
+    <!-- hamburger button, only shows up on small screens -->
+    <a href="#" class="toggle-btn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="Dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+      <li><a href="BookService.html"><i class="fa-solid fa-wrench"></i> New Repair Service</a></li>
+      <li><a href="Workshop.html"><i class="fa-solid fa-screwdriver-wrench"></i> Workshop Maintenance</a></li>
+      <li><a href="AnalyticReport.html"><i class="fa-solid fa-chart-simple"></i> AnalyticReport</a></li>
+     
+    </ul>
+  </nav>
+</header>
+
+    <main class="container">
+      <section class="page-header">
+        <h1>New Repair Job</h1>
+        <p>Create a repair request for a customer.</p>
+      </section>
+
+      <form id="repairForm">
+        <!-- Customer Information -->
+
+        <div class="card">
+          <h2> <i class="fa-solid fa-user"></i>  Customer Information</h2>
+
+          <label for="customerName">Customer Name</label>
+          <input
+            type="text"
+            id="customerName"
+            placeholder="Enter customer name"
+            required
+          />
+
+          <label for="phoneNumber">Phone Number</label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            placeholder="Enter phone number"
+            required
+          />
+          <label for="customerEmail">Email</label>
+<input type="email" id="customerEmail" placeholder="customer@email.com" required>
+        </div>
+
+        <!-- Vehicle Information -->
+
+        <div class="card">
+          <h2> <i class="fa-solid fa-car-side"></i>   Vehicle Information</h2>
+
+          <label for="vehicleBrand">Vehicle Brand</label>
+
+          <select id="vehicleBrand" required>
+            <option value="">Select Brand</option>
+
+            <option>Toyota</option>
+            <option>Honda</option>
+            <option>Nissan</option>
+            <option>Hyundai</option>
+            <option>Kia</option>
+            <option>Ford</option>
+            <option>BMW</option>
+            <option>Mercedes-Benz</option>
+            <option>Other</option>
+          </select>
+
+          <label for="vehicleModel">Vehicle Model</label>
+
+          <input
+            type="text"
+            id="vehicleModel"
+            placeholder="Example: Corolla"
+            required
+          />
+
+          <label for="plateNumber">Plate Number</label>
+
+          <input
+            type="text"
+            id="plateNumber"
+            placeholder="Example: T123ABC"
+            required
+          />
+
+          <label for="mileage">Mileage (KM)</label>
+
+          <input
+            type="number"
+            id="mileage"
+            placeholder="Enter mileage"
+            required
+          />
+        </div>
+
+        <!-- Repair Information -->
+
+        <div class="card">
+          <h2> <i class="fa-solid fa-screwdriver-wrench"></i>   Repair Information</h2>
+
+          <label for="repairType">Repair Type</label>
+
+          <select id="repairType" required>
+            <option value="">Select Repair</option>
+
+            <option>Oil Change</option>
+            <option>Brake Repair</option>
+            <option>Battery Replacement</option>
+            <option>Wheel Alignment</option>
+            <option>Engine Diagnostic</option>
+            <option>Transmission Repair</option>
+            <option>General Inspection</option>
+          </select>
+
+          <label for="mechanic">Assign Mechanic</label>
+
+          <select id="mechanic" required>
+            <option value="">Select Mechanic</option>
+
+            <option>Ahmed</option>
+
+            <option>Mohamed</option>
+
+            <option>Hassan</option>
+
+            <option>Ali</option>
+          </select>
+
+          <label for="preferredDate">Preferred Date</label>
+
+          <input type="date" id="preferredDate" required />
+
+          <label for="estimatedCost">Estimated Cost ($)</label>
+
+          <input
+            type="number"
+            id="estimatedCost"
+            placeholder="Estimated cost"
+          />
+
+          <label for="notes">Additional Notes</label>
+
+          <textarea
+            id="notes"
+            rows="4"
+            placeholder="Describe the problem..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn">  <i class="fa-solid fa-plus"></i>  Create Repair Job</button>
+      </form>
+    </main>
+    
+    <script src="../js/Responsive.js"></script>
+    <script src="../js/NotificationAPI.js"></script>
+    <script src="../js/Repair.js"></script>
+  
+  </body>
+</html>
