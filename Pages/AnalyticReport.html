@@ -5,47 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AnalyticReport | AutoCare Repair</title>
     <link rel="stylesheet" href="../css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body>
     <!-- Navigation Menu -->
-    <header>
-      <nav class="container">
-        <h2 class="logo"><i class="fa-solid fa-car"></i> AutoCare</h2>
+     <header>
+  <nav class="container">
+    <h2 class="logo"><i class="fa-solid fa-car"></i> AutoCare</h2>
 
-        <!-- hamburger button, only shows up on small screens -->
-        <a href="#" class="toggle-btn">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </a>
+    <!-- hamburger button, only shows up on small screens -->
+    <a href="#" class="toggle-btn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
 
-        <ul class="nav-links">
-          <li>
-            <a href="/dashboard"><i class="fa-solid fa-gauge"></i> Dashboard</a>
-          </li>
-          <li>
-            <a href="/book-service"
-              ><i class="fa-solid fa-wrench"></i> New Repair Service</a
-            >
-          </li>
-          <li>
-            <a href="/workshop"
-              ><i class="fa-solid fa-screwdriver-wrench"></i> Workshop
-              Maintenance</a
-            >
-          </li>
-          <li>
-            <a href="/analytic-report"
-              ><i class="fa-solid fa-chart-simple"></i> AnalyticReport</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <ul class="nav-links">
+      <li><a href="Dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+      <li><a href="BookService.html"><i class="fa-solid fa-wrench"></i> New Repair Service</a></li>
+      <li><a href="Workshop.html"><i class="fa-solid fa-screwdriver-wrench"></i> Workshop Maintenance</a></li>
+      <li><a href="AnalyticReport.html"><i class="fa-solid fa-chart-simple"></i> AnalyticReport</a></li>
+  
+    </ul>
+  </nav>
+</header>
     <main class="container">
       <section class="page-header">
         <h1>Analytics Report</h1>
@@ -55,39 +38,37 @@
 
       <section class="stats">
         <div class="card">
-          <h3><i class="fa-solid fa-clipboard-list"></i> Total Jobs</h3>
+          <h3> <i class="fa-solid fa-clipboard-list"></i>  Total Jobs</h3>
 
           <h2 id="reportTotal">0</h2>
         </div>
         <div class="card">
-          <h3><i class="fa-solid fa-clock"></i> Pending</h3>
+          <h3> <i class="fa-solid fa-clock"></i>  Pending</h3>
 
           <h2 id="reportPending">0</h2>
         </div>
 
         <div class="card">
-          <h3><i class="fa-solid fa-box"></i> Collected</h3>
+          <h3> <i class="fa-solid fa-box"></i>  Collected</h3>
 
           <h2 id="reportCollected">0</h2>
         </div>
 
         <div class="card">
-          <h3><i class="fa-solid fa-circle-check"></i> Completed</h3>
+          <h3> <i class="fa-solid fa-circle-check"></i>  Completed</h3>
 
           <h2 id="reportCompleted">0</h2>
         </div>
 
         <div class="card">
-          <h3><i class="fa-solid fa-star"></i> Most Common Repair</h3>
+          <h3> <i class="fa-solid fa-star"></i>  Most Common Repair</h3>
 
           <h2 id="commonRepair">-</h2>
         </div>
       </section>
 
       <section class="card">
-        <h2>
-          <i class="fa-solid fa-chart-column"></i> Repair Statistics Summary
-        </h2>
+        <h2> <i class="fa-solid fa-chart-column"></i> Repair Statistics Summary </h2>
 
         <div id="reportChart"></div>
       </section>
