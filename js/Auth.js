@@ -87,7 +87,7 @@ if (loginForm && signupForm) {
     if (email === savedUser.email && password === savedUser.password) {
       localStorage.setItem("autocareLoggedIn", "true");
       localStorage.setItem("autocareUserName", savedUser.name);
-      window.location.href = "Pages/Dashboard.html";
+      window.location.href = "/Dashboard.html";
     } else {
       loginMessage.textContent = "Wrong email or password";
     }
